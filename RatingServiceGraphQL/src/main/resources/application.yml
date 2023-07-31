@@ -1,0 +1,26 @@
+Server:
+  port: 8082
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/Microservice
+      database: Microservice
+  application:
+    name: Rating-Service
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+#      ddl-auto: update
+okta:
+  oauth2:
+    issuer: https://dev-94549189.okta.com/oauth2/default
+    audience: api://default
+#      show-sql: true
